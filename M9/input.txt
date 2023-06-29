@@ -1,0 +1,3 @@
+Acesta este un exemplu de texct scriss de studeent care contine cteva eroorii.
+Studientul arene probleme cu ortogrefia si greseste frecvent.
+Speram ca aceasta aplicatie sa il ajute sa corecteze cuvintele gresite.
