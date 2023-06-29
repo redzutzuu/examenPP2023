@@ -1,0 +1,2 @@
+Acesta este un exeml de txt care conține cuvinte greșite.
+Vreau să corectez aceste cuvânte: hause, tehnic, scuola.
