@@ -1,0 +1,79 @@
+Pentru a realiza o interacțiune bidirecțională între studenți și profesori folosind un model mediator și cozi între procese, putem crea un program Python care să implementeze această funcționalitate. Să începem prin a defini clasele implicate și relațiile dintre ele.
+
+Diagrama de clase:
+
++----------------+          +----------------+           +-----------------+
+|    Student     |          |    Professor   |           |    TeachingAssistant |
++----------------+          +----------------+           +-----------------+
+| - name: str    |          | - name: str    |           | - name: str     |
+| - queue: Queue |          | - queue: Queue |           | - queue: Queue  |
+|                |          |                |           |                 |
+| + send(message: str) |     | + send(message: str)    |   | + send(message: str)   |
+| + receive() -> str   |     | + receive() -> str      |   | + receive() -> str     |
++----------------+          +----------------+           +-----------------+
+
+
+Explicație:
+
+Clasa Student reprezintă un student și are un nume (name) și o coadă (queue) asociată. Coda este utilizată pentru a trimite și primi mesaje între student și mediator.
+Clasa Professor reprezintă un profesor și are un nume (name) și o coadă (queue) asociată. Coda este utilizată pentru a trimite și primi mesaje între profesor și mediator.
+Clasa TeachingAssistant reprezintă un asistent și are un nume (name) și o coadă (queue) asociată. Coda este utilizată pentru a trimite și primi mesaje între asistent și mediator.
+Toate cele trei clase au metode send(message: str) și receive() -> str pentru a trimite și primi mesaje prin intermediul cozi între procese.
+Mesajele sunt transmise prin intermediul mediatorului, iar cozi separate între procese sunt utilizate pentru a permite comunicația bidirecțională între studenți, profesori și asistent.
+
+Diagrama de obiecte:
+
++-----------------+
+|   Mediator      |
++-----------------+
+| - queues: dict  |
+|                 |
+| + register(participant: object, queue: Queue) |
+| + send(sender: object, receiver: object, message: str) |
+| + receive(receiver: object) -> str |
++-----------------+
+       ^
+       |
++-----------------+
+|   Student 1     |
++-----------------+
+| - name: "John"  |
+| - queue: Queue  |
++-----------------+
+       |
++-----------------+
+|   Student 2     |
++-----------------+
+| - name: "Alice" |
+| - queue: Queue  |
++-----------------+
+       |
++-----------------+
+|   Professor     |
++-----------------+
+| - name: "Dr. Smith" |
+| - queue: Queue  |
++-----------------+
+       |
++-----------------+
+|   TeachingAssistant |
++-----------------+
+| - name: "TA"    |
+| - queue: Queue  |
++-----------------+
+
+
+Explicație:
+
+Diagrama de obiecte prezintă instanțele de obiecte create pe baza claselor definite anterior.
+Obiectul Mediator este responsabil pentru gestionarea comunicației între participanții (studenți, profesori, asistenți) și utilizează dicționarul queues pentru a asocia fiecărui participant o coadă de mesaje.
+Obiectele Student 1, Student 2, Professor și TeachingAssistant reprezintă participanții la comunicare. Fiecare participant are un nume (name) și o coadă (queue) asociată. Participanții se înregistrează în mediator prin apelul metodei register() pentru a asocia coada lor cu mediatorul.
+Participanții pot trimite mesaje folosind metoda send() și pot primi mesaje folosind metoda receive(), ambele accesate prin intermediul mediatorului.
+Principiile SOLID aplicate:
+
+Principiul responsabilității unice (SRP): Fiecare clasă (Student, Professor, TeachingAssistant) are o singură responsabilitate - de a trimite și primi mesaje utilizând coada de mesaje asociată.
+Principiul deschis-închis (OCP): Programul este extensibil în sensul că poate fi ușor adăugate sau modificate clase noi de participanți (ex. TeachingAssistant), fără a fi necesare modificări în clasa mediatorului sau în alte clase existente.
+Principiul substituției lui Liskov (LSP): Obiectele de tip Student, Professor și TeachingAssistant pot fi înlocuite cu obiectul de tip Participant în orice context în care se așteaptă un participant în interacțiunea cu mediatorul.
+Principiul segregării interfețelor (ISP): Interfețele (send() și receive()) sunt segregate în clase separate, permițând astfel ca fiecare participant să implementeze doar metodele necesare.
+Principiul inversării dependențelor (DIP): Participanții (studenți, profesori, asistenți) depind de mediator prin intermediul unei interfețe abstracte (register(), send(), receive()), permițând decuplarea de detaliile concrete ale mediatorului.
+Aceasta este o abordare simplă a implementării unui model mediator pentru interacțiunea bidirecțională între studenți, profesori și asistenți folosind cozi între procese.
