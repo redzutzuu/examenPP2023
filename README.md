@@ -1,11 +1,11 @@
 Dependente necesare:
 Kotlinx
 
-" <dependency> "
-       " <groupId>org.jetbrains.kotlinx</groupId> "
-       " <artifactId>kotlinx-coroutines-core</artifactId> "
-       " <version>1.5.0</version> "
-" </dependency> "
+ dependency
+        groupId>org.jetbrains.kotlinx</groupId
+        artifactId>kotlinx-coroutines-core</artifactId
+        version1.5.0/version
+/dependency
 
 
 1. Utilizand genericile sa se implementeze in Kotlin o functie extensie pe un subarbore de tipuri de date care sa verifice daca variabila contine un numar si apoi sa determine daca numarul este prim sau nu.
