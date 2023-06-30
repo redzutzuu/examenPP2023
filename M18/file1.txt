@@ -1,0 +1,3 @@
+Acesta este un exemplu de fisier text.
+Linia 2 contine un cuvant cheie: exemplu.
+Aceasta linie nu contine cuvantul cautat.

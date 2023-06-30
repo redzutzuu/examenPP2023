@@ -1,0 +1,4 @@
+Acesta este un alt fisier text.
+Exemplul de cautare se gaseste in linia 3.
+In acest fisier exista doua cuvinte cheie: exemplu exemplu.
+Ultima linie nu contine cuvantul cautat.
