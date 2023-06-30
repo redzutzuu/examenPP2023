@@ -1,0 +1,3 @@
+Acesta este un exemplu de fișier text.
+În acest fișier vom extrage caractere din mijlocul cuvintelor.
+Extragem doar caracterele din cuvintele cu minim 4 litere.
