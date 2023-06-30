@@ -1,0 +1,4 @@
+This is a sample text file.
+It contains words separated by spaces.
+The program will build a binary tree based on the words.
+Only words with an even length will be included in the tree.
