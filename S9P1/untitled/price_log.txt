@@ -1,0 +1,4 @@
+john - added: Rate 0.1 changed at 2023-06-29T21:57:04.026026650
+john - updated: Rate 0.2 changed at 2023-06-29T21:57:04.044528684
+john - added: Rate 0.1 changed at 2023-06-29T22:00:30.834951312
+john - updated: Rate 0.2 changed at 2023-06-29T22:00:30.854309332
