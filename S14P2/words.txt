@@ -1,0 +1,9 @@
+hello
+world
+example
+programming
+python
+multiprocessing
+communication
+queue
+process
