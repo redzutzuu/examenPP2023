@@ -1,0 +1,4 @@
+Max -> file1.txt
+Min -> file2.txt
+NrApar -> file3.txt
+EliminDup -> file4.txt
