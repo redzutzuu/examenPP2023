@@ -1,0 +1,3 @@
+Acesta este un exemplu de fișier text.
+În acest fișier vom efectua unele operații de procesare.
+Stochează informații și aplică transformări asupra cuvintelor.
