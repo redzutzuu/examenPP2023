@@ -175,3 +175,10 @@ Sub 27
 1. Fie 2 colectii initializate cu 100 de numere din submultimile A = {x apartine nr naturale | x = (8*n-18)/(2*n-9), n apartine nr naturale} si B = {x apartine nr intregi | x = (9*n^2-48n+16)/(3n-8), n apartine nr naturale}. Pentru acestea se vor calcula (crea un program Kotlin) utilizand functii de transformare specifice si lambda calcul urmatoarele operatii (A reunit B) intersects (B intesects A) unde AxB = {(a,b)| a apartine A ^ b apartine B}. Rezultatul este depus intr-un hashmap iar acesta va fi afisat.
 
 2. Sa se scrie un program Python (utilizand threading) care va utiliza subclase active (cu un fir) pentru procesarea simultana a unui hashmap bazata pe functii pure. Clasa de baza va stabili operatiile (de ex. adunare, scadere, inmultire binara pe 16 biti) iar subclasele vor pune la dispozitie obiecte care se executa in fire separate.
+
+
+Sub 28
+
+1. Sa se scrie un program Kotlin care va utiliza subclase active (cu actori) pentru procesarea simultana a unui hashmap. Clasa de baza va stabili operatiile (de ex. adunare, scadere, inmultire, impartire) iar subclasele vor pune la dispozitie obiecte care se executa in fire separate.
+
+2. Sa se creeze o aplicatie pentru rezervarea unei camere de hotel. Camerele  (cu atributele si operatorii lor) sunt obiecte si sunt retinute intr-un ADT. Cu ajutorul unor decoratori peste functiile de baza se vor implementa un flux suplimentar de tratare a unei liste de asteptare in caz de cerere de rezervare care nu poate fi satisfacuta imediat.
